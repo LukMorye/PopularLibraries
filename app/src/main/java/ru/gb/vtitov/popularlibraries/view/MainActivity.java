@@ -1,13 +1,14 @@
-package ru.gb.vtitov.popularlibraries;
+package ru.gb.vtitov.popularlibraries.view;
 
-import androidx.appcompat.app.AppCompatActivity;
+import ru.gb.vtitov.popularlibraries.presenter.Presenter;
+import ru.gb.vtitov.popularlibraries.R;
+import ru.gb.vtitov.popularlibraries.presenter.ViewInterface;
 
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.arellomobile.mvp.MvpActivity;
 import com.arellomobile.mvp.MvpAppCompatActivity;
 import com.arellomobile.mvp.presenter.InjectPresenter;
 import com.arellomobile.mvp.presenter.ProvidePresenter;

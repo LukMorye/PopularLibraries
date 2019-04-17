@@ -1,18 +1,9 @@
-package ru.gb.vtitov.popularlibraries;
+package ru.gb.vtitov.popularlibraries.presenter;
 
 import com.arellomobile.mvp.InjectViewState;
 import com.arellomobile.mvp.MvpPresenter;
-import com.arellomobile.mvp.MvpView;
 
-interface PresenterInterface {
-
-	void onNewText(String text);
-}
-
-interface ViewInterface extends MvpView {
-	void setNewText(String text);
-	void clearInputField();
-}
+import ru.gb.vtitov.popularlibraries.model.Model;
 
 
 @InjectViewState
@@ -20,7 +11,7 @@ public class Presenter extends MvpPresenter<ViewInterface> implements PresenterI
 
 	private final Model model;
 
-	Presenter() {
+	public Presenter() {
 		model = new Model();
 		model.setText("");
 	}
