@@ -7,13 +7,22 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements ViewInterface {
+import com.arellomobile.mvp.MvpActivity;
+import com.arellomobile.mvp.MvpAppCompatActivity;
+import com.arellomobile.mvp.presenter.InjectPresenter;
+import com.arellomobile.mvp.presenter.ProvidePresenter;
+
+public class MainActivity extends MvpAppCompatActivity implements ViewInterface {
 
 	/* UI Elements */
 	private TextView textView;
 	private EditText editText;
 	/* Presenter */
-	private final Presenter presenter = new Presenter(this);
+	@InjectPresenter
+	Presenter presenter;
+
+	@ProvidePresenter
+	Presenter providePresenter() { return new Presenter(); }
 
 
 	@Override

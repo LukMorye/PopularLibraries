@@ -1,31 +1,36 @@
 package ru.gb.vtitov.popularlibraries;
 
+import com.arellomobile.mvp.InjectViewState;
+import com.arellomobile.mvp.MvpPresenter;
+import com.arellomobile.mvp.MvpView;
+
 interface PresenterInterface {
 
 	void onNewText(String text);
 }
 
-interface ViewInterface {
+interface ViewInterface extends MvpView {
 	void setNewText(String text);
 	void clearInputField();
 }
 
-public class Presenter implements PresenterInterface {
 
-	private final ViewInterface view;
-	private final Model model = new Model();
+@InjectViewState
+public class Presenter extends MvpPresenter<ViewInterface> implements PresenterInterface {
 
-	Presenter(ViewInterface view) {
-		this.view = view;
+	private final Model model;
+
+	Presenter() {
+		model = new Model();
 		model.setText("");
 	}
 
 	@Override
 	public void onNewText(String text) {
 		String newText = model.getText() + text;
-		view.setNewText(newText);
+		getViewState().setNewText(newText);
 		model.setText(newText);
-		view.clearInputField();
+		getViewState().clearInputField();
 
 	}
 }
