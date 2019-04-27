@@ -23,6 +23,7 @@ public class IdealService  {
 					String message = "You got new ideal service by number: " + (i+1) + " from THE GOD!";
 					god.onNext(message);
 				}
+				god.onComplete();
 			} catch (InterruptedException e) {
 				Log.e(TAG, "Ideal service didn't disposed :(");
 			}

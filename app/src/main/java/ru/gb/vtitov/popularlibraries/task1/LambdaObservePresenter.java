@@ -1,8 +1,5 @@
 package ru.gb.vtitov.popularlibraries.task1;
 
-
-import android.util.Log;
-
 import io.reactivex.Observable;
 import io.reactivex.Single;
 import io.reactivex.android.schedulers.AndroidSchedulers;
