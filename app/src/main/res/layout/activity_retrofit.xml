@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".task2.view.RetrofitActivity"
+    android:padding="40dp">
+    <Button
+        android:id="@+id/retrofit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Find a friend"/>
+    <LinearLayout
+        android:id="@+id/friend_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ImageView
+            android:id="@+id/friend_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/greeating_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            tools:text="Hi human, Nice to meet you"/>
+    </LinearLayout>
+
+</LinearLayout>
