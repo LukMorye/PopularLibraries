@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PopularLibraries</string>
+    <string name="edit_hint">Any text...</string>
+    <string name="button_title">Connect</string>
 </resources>
